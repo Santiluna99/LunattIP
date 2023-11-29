@@ -2,7 +2,7 @@
 trap 'echo -e "\nEscaneo detenido por el usuario"; exit' INT # Captura la señal de interrupción (Ctrl+C) para detener el script
 figlet -f slant -c "LunattIP"
 echo -e "\e[1;35mDesigned by Santiago Luna\e[0m"
-echo -e "\e[38;5;82mAguarde hasta que lea fin del escaneo o presione una tecla\e[0m"
+echo -e "\e[38;5;82mAguarde hasta que lea fin del escaneo o presione CTRL C\e[0m"
 
 for i in {1..255}; do
   if timeout 0.5 bash -c "ping -c 1 190.160.0.$i" >/dev/null 2>&1; then
